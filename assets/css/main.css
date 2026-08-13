@@ -1660,7 +1660,9 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		.plan-info-button {
+/* Plan information button */
+
+.plan-info-button {
     margin-top: 10px;
     padding: 5px 12px;
     font-size: 0.8em;
