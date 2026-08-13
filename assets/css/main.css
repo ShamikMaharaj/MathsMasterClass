@@ -1663,9 +1663,9 @@ input, select, textarea {
 /* Plan information button */
 
 .plan-info-button {
-    margin-top: 10px;
-    padding: 5px 12px;
-    font-size: 0.8em;
+    margin-top: 7px;
+    padding: 2px 7px;
+    font-size: 0.5em;
     cursor: pointer;
 }
 
