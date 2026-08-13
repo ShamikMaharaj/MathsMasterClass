@@ -119,12 +119,15 @@
 								<form method="post" action="https://formspree.io/f/mnpavall">
 									<div class="fields">
 										<div class="field half">
-											<label for="student name">Name</label>
+											<label for="student name">Full Name</label>
 											<input type="text" name="name" id="name" />
 										</div>
 										<div class="field half">
-											<label for="grade">Grade</label>
-											<input type="text" name="grade" id="grade" />
+    										<label for="grade">Grade</label>
+    										<select name="grade" id="grade">
+        										<option value="grade11">Grade 11</option>
+        										<option value="grade12">Grade 12</option>
+    										</select>
 										</div>
 										<div class="field half">
 											<label for="cell">Cell</label>
@@ -139,8 +142,20 @@
 											<input type="email" name="email" id="email" />
 										</div>
 										<div class="field half">
-											<label for="preferred day">Preferred-day</label>
-											<input type="text" name="day" id="day" />
+    										<label for="plan">Select a Day</label>
+    										<select name="plan" id="plan">
+        										<option value="monday">Monday</option>
+        										<option value="tuesday">Tuesday</option>
+												<option value="wednesday">Wednesday</option>
+        										<option value="thursday">Thursday</option>
+    										</select>
+										</div>
+										<div class="field half">
+    										<label for="plan">Select a Plan</label>
+    										<select name="plan" id="plan">
+        										<option value="plan1">Plan 1</option>
+        										<option value="plan2">Plan 2</option>
+    										</select>
 										</div>
 										<div class="field">
 											<label for="message">Message(optional)</label>
