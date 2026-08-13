@@ -63,7 +63,7 @@
 								<p>At Maths: MasterClass, Dr. Shamik Maharaj and his team strive to create an atmosphere of confidence and clarity for all students </a>.</p>
 								<p></a>Our fully online, interactive lessons are held once a week for 1.5 hours per session. To ensure that every student receives individual attention, each class is limited to 10–15 students.</p>
 								<p></a>From September 2026 until the end of the academic year, every session is an Exam Preparation Bootcamp dedicated to past papers and proven examination techniques. By practicing these questions extensively, students develop the speed, accuracy, and confidence needed to perform under examination time pressure.</p>
-								<p></a>Every lesson is recorded and shared with participants.</p>
+								<p></a>Every lesson is recorded and students may request access to the full library of all recordings.</p>
 								<p></a>For additional support, students may request exclusive access to our team of tutors (including Dr. Shamik Maharaj) via our WhatsApp helpline, which is always on. This ongoing support ensures that learning continues long after the weekly lesson has ended.</p>
 								<p></a></p>
 							</article>
@@ -136,13 +136,31 @@
         										<option value="" disabled selected>Please select a grade first</option>
     										</select>
 										</div>
+
 										<div class="field half">
     										<label for="plan">Select a Plan</label>
     										<select name="plan" id="plan">
         										<option value="plan1">Plan 1</option>
         										<option value="plan2">Plan 2</option>
     										</select>
+
+    										<button type="button" id="planInfoButton" class="plan-info-button">
+        										Plan info
+    										</button>
+
+    										<div id="planInfo" class="plan-info-box">
+        										<strong>Plan 1</strong><br />
+        										    One interactive online lesson (1.5 hours) per week.<br />
+    												R699 per month (R499 for first month)<br /><br />
+
+        										<strong>Plan 2</strong><br />
+        										One interactive online lesson (1.5 hours) per week +
+    											access to the WhatsApp support group +
+    											access to the complete library of recorded lessons.<br />
+    											R749 per month (R549 for first month)
+    										</div>
 										</div>
+
 										<div class="field half">
 											<label for="cell">Cell</label>
 											<input type="text" name="cell" id="cell" />
@@ -223,6 +241,22 @@
         });
     </script>
 
+    <script>
+        const planInfoButton = document.getElementById("planInfoButton");
+        const planInfo = document.getElementById("planInfo");
+
+        planInfoButton.addEventListener("click", function() {
+
+            if (planInfo.style.display === "block") {
+                planInfo.style.display = "none";
+                planInfoButton.textContent = "Plan info";
+            } else {
+                planInfo.style.display = "block";
+                planInfoButton.textContent = "Hide plan info";
+            }
+
+        });
+    </script>
 
 	</body>
 </html>
