@@ -122,12 +122,28 @@
 											<label for="student name">Full Name</label>
 											<input type="text" name="name" id="name" />
 										</div>
+<div class="field half">
+    <label for="grade">Grade</label>
+    <select name="grade" id="grade" required>
+        <option value="" disabled selected>Please select a grade</option>
+        <option value="grade11">Grade 11</option>
+        <option value="grade12">Grade 12</option>
+    </select>
+</div>
+
+<div class="field half">
+    <label for="day">Select a Day</label>
+    <select name="day" id="day" disabled required>
+        <option value="" disabled selected>Please select a grade first</option>
+    </select>
+</div>
 										<div class="field half">
-    										<label for="grade">Grade</label>
-    										<select name="grade" id="grade">
-        										<option value="grade11">Grade 11</option>
-        										<option value="grade12">Grade 12</option>
+    										<label for="plan">Select a Plan</label>
+    										<select name="plan" id="plan">
+        										<option value="plan1">Plan 1</option>
+        										<option value="plan2">Plan 2</option>
     										</select>
+										</div>
 										</div>
 										<div class="field half">
 											<label for="cell">Cell</label>
@@ -140,22 +156,6 @@
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="email" name="email" id="email" />
-										</div>
-										<div class="field half">
-    										<label for="plan">Select a Day</label>
-    										<select name="plan" id="plan">
-        										<option value="monday">Monday</option>
-        										<option value="tuesday">Tuesday</option>
-												<option value="wednesday">Wednesday</option>
-        										<option value="thursday">Thursday</option>
-    										</select>
-										</div>
-										<div class="field half">
-    										<label for="plan">Select a Plan</label>
-    										<select name="plan" id="plan">
-        										<option value="plan1">Plan 1</option>
-        										<option value="plan2">Plan 2</option>
-    										</select>
 										</div>
 										<div class="field">
 											<label for="message">Message(optional)</label>
@@ -435,6 +435,39 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+	<script>
+        const grade = document.getElementById("grade");
+        const day = document.getElementById("day");
+
+        grade.addEventListener("change", function() {
+
+            day.innerHTML = "";
+
+            if (grade.value === "grade11") {
+
+                day.disabled = false;
+
+                day.innerHTML = `
+                    <option value="" disabled selected>Please select a day</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                `;
+
+            } else if (grade.value === "grade12") {
+
+                day.disabled = false;
+
+                day.innerHTML = `
+                    <option value="" disabled selected>Please select a day</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                `;
+            }
+        });
+    </script>
+
 
 	</body>
 </html>
